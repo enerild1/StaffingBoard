@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StaffingBoard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+            rel="stylesheet">    
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+             <link  rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" 
+          
+          rel="stylesheet">
+     <link rel="stylesheet" href="style2.css">
+     
+     <script src="Script3.js" defer></script>
+
+</head>
+
+
+
+
+
+
+<body>
+  
+  <nav>
+      <div class="container">
+        <img src="./Amazon-Logo.png" class="logo" />
+        <div class="container">
+                  <div class="top">
+                    <div class="time">
+                      <span class="hms"></span>
+                      <span class="ampm"></span>
+                      <br>
+                      <span class="date"></span>
+                    </div>
+                    
+                    
+                </div>
+                <div class="header">
+                        <h1>StaffingBoard</h1>
+                    </div>
+
+          <div class="profile-area">
+            <div class="theme-btn">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+            <div class="profile">
+                <div class="profile-photo">
+                
+            </div>
+            <button id="Menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+          </div>
+      </div>
+  </nav>
+  <!---End of Navbar-->  
+<main>
+  <!---sidebar-->  
+
+    <aside>
+        <button id="close-btn">
+            <span class="material-icons-sharp">close</span>
+        </button>
+        <div class="sidebar">
+            <div class="page-container" id="myPageContainer">
+                <div class="filter-bar expand">
+                  <div class="filter-header">
+                   
+                    <div class="sort-selector row">
+                      <span class="sort-label">Sort:</span>
+                      <div class="expanding-dropdown expanded row">
+               
+                      </div>
+                    </div>
+                    <div class="flex-section"> 
+                      <div id="filteredUsersCount"></div>
+                    </div>
+                    <div class="filter-collapse-button selectable">
+                      <i class="material-icons">filter_alt</i>
+                    </div>
+                  </div>
+                  <div class="filter-panel expand">
+
+                    <div class="filter-item dropdown filter-dropdown selectable" id="managerDropdown">
+                      Manager
+                      <div id="managerDropdown2" class="managerDropdown-content">
+                        <input type="text" placeholder="enter managers name" id="myInput" onkeyup="filterDropdown('myDropdown', 'myInput')">
+                        <ul id="myDropdown">
+                            <li> 
+                                <input type="checkbox" value="Allen,Luke">Allen,Luke </li>
+                            <li> 
+                                <input type="checkbox" value="Borkowski,Rafal">Borkowski,Rafal</li>
+                            <li> 
+                                <input type="checkbox" value="Bramley,Graham Barrie">Bramley,Graham Barrie</li>
+                            <li> 
+                                <input type="checkbox" value="Buckle,Robert">Buckle,Robert</li>
+                            <li>
+                                 <input type="checkbox" value="Bull,Philip">Bull,Philip</li>
+                            <li>
+                                 <input type="checkbox" value="Burton,Jake">Burton,Jake</li>
+                            <li>
+                                 <input type="checkbox" value="Cain,Sarah">Cain,Sarah</li>
+                            <li>
+                                 <input type="checkbox" value="Chambers,Mark">Chambers,Mark</li>
+                            <li>
+                                 <input type="checkbox" value="Chaudhuri,Dev Ranjit">Chaudhuri,Dev Ranjit</li>
+                            <li>
+                                 <input type="checkbox" value="Corish,Eleanor">Corish,Eleanor</li>
+                            <li>
+                                 <input type="checkbox" value="Coyne,Liam">Coyne,Liam</li>
+                            <li>
+                                 <input type="checkbox" value="Dassu,Faisal">Dassu,Faisal</li>
+                            <li>
+                                 <input type="checkbox" value="Dosangh,Deneal">Dosangh,Deneal</li>
+                            <li>
+                                 <input type="checkbox" value="Elias,Melissa Rony">Elias,Melissa Rony</li>
+                            <li>
+                                 <input type="checkbox" value="Goodwin,Jacob">Goodwin,Jacob</li>
+                            <li>
+                                 <input type="checkbox" value="Griffiths,Ben">Griffiths,Ben</li>
+                            <li>
+                                 <input type="checkbox" value="Haye,Claire">Haye,Claire</li>
+                            <li>
+                                 <input type="checkbox" value="Hayes,Matt">Hayes,Matt</li>
+                            <li>
+                                 <input type="checkbox" value="Howard,Aidan">Howard,Aidan</li>
+                            <li>
+                                 <input type="checkbox" value="Hungund,Ashish">Hungund,Ashish</li>
+                            <li>
+                                 <input type="checkbox" value="Hussain,Rizwan">Hussain,Rizwan</li>
+                            <li>
+                                 <input type="checkbox" value="Kerry,Lewis">Kerry,Lewis</li>
+                            <li>
+                                 <input type="checkbox" value="Kishnasamy,Daven">Kishnasamy,Daven</li>
+                            <li>
+                                 <input type="checkbox" value="Knapp,Jonathan James">Knapp,Jonathan James</li>
+                            <li>
+                                 <input type="checkbox" value="Kumiega,Marcin">Kumiega,Marcin</li>
+                            <li>
+                                 <input type="checkbox" value="Latif,Raihan Raihan">Latif,Raihan Raihan</li>
+                            <li>
+                                 <input type="checkbox" value="Law,Pete">Law,Pete</li>
+                            <li>
+                                 <input type="checkbox" value="Leese,Oliver">Leese,Oliver</li>
+                            <li>
+                                 <input type="checkbox" value="Lindsay,Rob James">Lindsay,Rob James</li>
+                            <li>
+                                 <input type="checkbox" value="Maniglia,Juan Andres">Maniglia,Juan Andres</li>
+                            <li>
+                                 <input type="checkbox" value="Manktelow,Anna-Maria">Manktelow,Anna-Maria</li>
+                            <li>
+                                 <input type="checkbox" value="Martin,Emily">Martin,Emily</li>
+                            <li>
+                                 <input type="checkbox" value="McFarlane,Adam">McFarlane,Adam</li>
+                            <li>
+                                 <input type="checkbox" value="Medintu,Beatrice Laura">Medintu,Beatrice Laura</li>
+                            <li>
+                                 <input type="checkbox" value="Metcalf,Dan">Metcalf,Dan</li>
+                            <li>
+                                 <input type="checkbox" value="Miezitis,Edgars">Miezitis,Edgars</li>
+                            <li>
+                                 <input type="checkbox" value="Moor,Alan Kieron">Moor,Alan Kieron</li>
+                            <li>
+                                 <input type="checkbox" value="Moosa,Ash">Moosa,Ash</li>
+                            <li>
+                                 <input type="checkbox" value="Musson,Connor">Musson,Connor</li>
+                            <li>
+                                 <input type="checkbox" value="Nicholson,Guy">Nicholson,Guy</li>
+                            <li>
+                                 <input type="checkbox" value="Onyigbuo,Eric Ekenedilichukwu">Onyigbuo,Eric Ekenedilichukwu</li>
+                            <li>
+                                 <input type="checkbox" value="Pallav,Sneh">Pallav,Sneh</li>
+                            <li>
+                                 <input type="checkbox" value="Percival,Howard">Percival,Howard</li>
+                            <li>
+                                 <input type="checkbox" value="Poole,Connor">Poole,Connor</li>
+                            <li>
+                                 <input type="checkbox" value="Rekas,Anna">Rekas,Anna</li>
+                            <li>
+                                 <input type="checkbox" value="Roberts,Jordan Alexander">Roberts,Jordan Alexander</li>
+                            <li>
+                                 <input type="checkbox" value="Rose,Lyndsey">Rose,Lyndsey</li>
+                            <li>
+                                 <input type="checkbox" value="Roshan,Raj">Roshan,Raj</li>
+                            <li>
+                                 <input type="checkbox" value="Sachdev,Darshan">Sachdev,Darshan</li>
+                            <li>
+                                 <input type="checkbox" value="Shorrock,Thomas Peter">Shorrock,Thomas Peter</li>
+                            <li>
+                                 <input type="checkbox" value="Singh,Manjeet">Singh,Manjeet</li>
+                            <li>
+                                 <input type="checkbox" value="Smith,Georgina">Smith,Georgina</li>
+                            <li>
+                                 <input type="checkbox" value="Sommer,Hendrik">Sommer,Hendrik</li>
+                            <li>
+                                 <input type="checkbox" value="Stanley,Leigh">Stanley,Leigh</li>
+                            <li>
+                                 <input type="checkbox" value="Tisca,Ioana">Tisca,Ioana</li>
+                            <li>
+                                 <input type="checkbox" value="Tombs,Jimmy Dean">Tombs,Jimmy Dean</li>
+                            <li>
+                                 <input type="checkbox" value="Uche,Lisa Chukwudalu">Uche,Lisa Chukwudalu</li>
+                            <li>
+                                 <input type="checkbox" value="Vasilev,Yavor">Vasilev,Yavor</li>
+                            <li>
+                                 <input type="checkbox" value="Wakefield,Anna">Wakefield,Anna</li>
+                            <li>
+                                 <input type="checkbox" value="Ward,James">Ward,James</li>
+                            <li>
+                                 <input type="checkbox" value="Wheat,Sarah">Wheat,Sarah</li>
+                            <li>
+                                 <input type="checkbox" value="Wysocka,Magdalena">Wysocka,Magdalena</li>
+                            <li>
+                                 <input type="checkbox" value="Xhela,Enerild">Xhela,Enerild</li>
+                            <li>
+                                 <input type="checkbox" value="Zar,Adil">Zar,Adil</li>
+                        </ul>
+            
+                        
+                      </div>
+                    </div>
+
+
+                    <div class="filter-item dropdown filter-dropdown selectable" id="shiftDropdown">
+                      Shift
+                      <div id="shiftDropdown2" class="shiftDropdown-content">
+                       
+                        <ul>
+                          <span>OUTBOUND</span>
+                          <li>     
+                              <input type="checkbox" value="DL4-0730" >Sat - Tue</li>
+                          <li> 
+                              <input type="checkbox" value="DA5-0730" >Sun - Weds</li>
+                          <li>  
+                              <input type="checkbox" value="DF6-0730" >Mon - Thur</li>
+                           <li> 
+                              <input type="checkbox" value="DK7-0730">Tue - Fri</li>
+                          <li> 
+                              <input type="checkbox" value="DB1-0730" >Weds - Sat</li>
+                          <li> 
+                              <input type="checkbox" value="DN2-0730" >Thur - Sun</li>
+                           <li> 
+                              <input type="checkbox" value="DH3-0730" >Fri - Mon</li>  
+                        </ul>
+            
+                       
+                        <ul>
+                          <span>INBOUND</span>
+                          <li>     
+                              <input type="checkbox" value="DL4-0800" >Sat - Tue</li>
+                          <li> 
+                              <input type="checkbox" value="DA5-0800" >Sun - Weds</li>
+                          <li>  
+                              <input type="checkbox" value="DF6-0800" >Mon - Thur</li>
+                           <li> 
+                              <input type="checkbox" value="DK7-0800">Tue - Fri</li>
+                          <li> 
+                              <input type="checkbox" value="DB1-0800" >Weds - Sat</li>
+                          <li> 
+                              <input type="checkbox" value="DN2-0800" >Thur - Sun</li>
+                           <li> 
+                              <input type="checkbox" value="DH3-0800" >Fri - Mon</li>  
+                        </ul>
+             
+                      </div>
+                     
+                    </div>
+                  
+                    <div class="filter-item dropdown filter-dropdown selectable" id="DepartmentDropdown">
+                        Department
+                        <div id="DepartmentDropdown2" class="DepartmentDropdown-content" >
+
+                        <ul>
+                          
+                          <li> 
+                              <input type="checkbox" value="27">IC/QA/CS</li>
+                          <li>  
+                              <input type="checkbox" value="1">Vendor Receive</li>
+                              <li> 
+                                <input type="checkbox" value="5">IB Lead/PA</li>
+                          <li>     
+                              <input type="checkbox" value="6">IB Problem Solve</li>
+                          <li> 
+                            <input type="checkbox" value="2">Receive Dock</li>
+                          <li> 
+                              <input type="checkbox" value="3">Inbound Stow</li>
+                              <li> 
+                                <input type="checkbox" value="18">Pack - Single</li>
+                                <li> 
+                                  <input type="checkbox" value="16">Pack - Flow</li>
+                                 <li> 
+                                            <input type="checkbox" value="14">Induct/Rebin</li>
+                                    <li> 
+                                                  <input type="checkbox" value="24">Vendor Returns</li>                             
+                                  <li> 
+                                    <input type="checkbox" value="13">Picking</li>
+                                    <li> 
+                                      <input type="checkbox" value="21">Ship Dock</li>
+                                      <li> 
+                                        <input type="checkbox" value="19">OB Lead/PA</li>
+                                        <li> 
+                                          <input type="checkbox" value="20">OB Problem Solve</li>
+                                          
+                                            <li> 
+                                              <input type="checkbox" value="15">Pack Multis</li>
+                                              <li> 
+                                                <input type="checkbox" value="17">Pack Multis</li>
+                                                
+                
+                           
+                        </ul>
+            
+                      
+                      </div>
+                
+                </div>
+                </div>
+             
+              </div>
+
+
+            <form>
+              <div class="search-bar">
+                
+          <span class="material-icons-sharp">search</span>
+          <input type="text" placeholder="Search Users" id="search_users">
+        </div>
+        
+      </form>
+           
+
+
+        <div class="AA-Select" >
+          <div id="filteredUsersCount"></div>
+            <div  class="search-bar2" id="source-container" data-role="drag-drop-container"  >
+                <!---test-->
+                <div id="data-output">
+                
+                </div>  
+            </div>    
+        </div>
+<!---End of sidebar-->  
+    </aside>
+
+
+<main2>
+<!---End of aside--> 
+
+
+
+<section class="floorP2" id="wall104">
+     
+
+
+</div>
+
+<div class="calendar"  >
+    <div class="calendar__header">
+      <div>Wall</div>
+      <div>Induct<p><span id="countSpan"></span></p></div>
+      <div>Rebin<p><span id="countSpan2"></span></p></div>
+      <div>Pack<p><span id="countSpan3"></span></p></div>
+  
+    </div>
+    <div class="calendar__week">
+      <div class="cards2">
+        <div class="card fill-blue" data-card="0">
+          
+          <div class="card__detail">104</div>
+        </div>
+      </div>
+      <div  class="calendar__dayPicker1">in104</div>
+      <div  class="calendar__dayPacker1">rsAfeRebin104A/C</div>
+      <div class="calendar__dayPacker1">rsAfeRebin104B/D</div>
+
+    </div>
+
+
+    <div class="calendar"  >
+      <div class="calendar__headerPack">
+      </div>
+
+    <div class="calendar__weekPack">
+      <div class="calendar__dayPacker1">wsAFE1_104_01</div>
+      <div class="calendar__dayPacker1">wsAFE1_104_02</div>
+      <div class="calendar__dayPacker1">wsAFE1_104_03</div>
+      <div class="calendar__dayPacker1">wsAFE1_104_04</div>
+      <div class="calendar__dayPacker1">wsAFE1_104_05</div>
+      <div class="calendar__dayPacker1">wsAFE1_104_06</div>
+      </div>
+
+</div>
+
+</section>   
+
+<section class="floorP2" id="wall105">
+
+  <div class="calendar"  >
+      <div class="calendar__header">
+        <div>Wall</div>
+        <div>Induct<p><span id="countSpan"></span></p></div>
+        <div>Rebin<p><span id="countSpan2"></span></p></div>
+        <div>Pack<p><span id="countSpan3"></span></p></div>
+    
+      </div>
+      <div class="calendar__week">
+        <div class="cards2">
+          <div class="card fill-blue" data-card="0">
+            
+            <div class="card__detail">105</div>
+          </div>
+        </div>
+        <div  class="calendar__dayPicker1">in105</div>
+        <div  class="calendar__dayPacker1">rsAfeRebin105 A/C</div>
+        <div class="calendar__dayPacker1">rsAfeRebin105 B/D</div>
+  
+      </div>
+  
+  
+      <div class="calendar"  >
+        <div class="calendar__headerPack">
+        </div>
+  
+      <div class="calendar__weekPack">
+        <div class="calendar__dayPacker1">wsAFE1_105_01</div>
+        <div class="calendar__dayPacker1">wsAFE1_105_02</div>
+        <div class="calendar__dayPacker1">wsAFE1_105_03</div>
+        <div class="calendar__dayPacker1">wsAFE1_105_04</div>
+        <div class="calendar__dayPacker1">wsAFE1_105_05</div>
+        <div class="calendar__dayPacker1">wsAFE1_105_06</div>
+        </div>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  
+  <section class="floorP2" id="wall106">
+       
+  
+  
+  </div>
+  
+  <div class="calendar"  >
+      <div class="calendar__header">
+        <div>Wall</div>
+        <div>Induct<p><span id="countSpan"></span></p></div>
+        <div>Rebin<p><span id="countSpan2"></span></p></div>
+        <div>Pack<p><span id="countSpan3"></span></p></div>
+    
+      </div>
+      <div class="calendar__week">
+        <div class="cards2">
+          <div class="card fill-blue" data-card="0">
+            
+            <div class="card__detail">106</div>
+          </div>
+        </div>
+        <div  class="calendar__dayPicker1">in106</div>
+        <div  class="calendar__dayPacker1">rsAfeRebin106 A/C</div>
+        <div class="calendar__dayPacker1">rsAfeRebin106 B/D</div>
+  
+      </div>
+  
+  
+      <div class="calendar"  >
+        <div class="calendar__headerPack">
+        </div>
+  
+      <div class="calendar__weekPack">
+        <div class="calendar__dayPacker1">wsAFE1_106_01</div>
+        <div class="calendar__dayPacker1">wsAFE1_106_02</div>
+        <div class="calendar__dayPacker1">wsAFE1_106_03</div>
+        <div class="calendar__dayPacker1">wsAFE1_106_04</div>
+        <div class="calendar__dayPacker1">wsAFE1_106_05</div>
+        <div class="calendar__dayPacker1">wsAFE1_106_06</div>
+        </div>
+  
+  </div>
+  
+  </section> 
+  
+  <section class="floorP2" id="wall108">
+       
+  
+  
+  </div>
+  
+  <div class="calendar"  >
+      <div class="calendar__header">
+        <div>Wall</div>
+        <div>Induct<p><span id="countSpan"></span></p></div>
+        <div>Rebin<p><span id="countSpan2"></span></p></div>
+        <div>Pack<p><span id="countSpan3"></span></p></div>
+    
+      </div>
+      <div class="calendar__week">
+        <div class="cards2">
+          <div class="card fill-blue" data-card="0">
+            
+            <div class="card__detail">108</div>
+          </div>
+        </div>
+        <div  class="calendar__dayPicker1">in108</div>
+        <div  class="calendar__dayPacker1">rsAfeRebin108 A/C</div>
+        <div class="calendar__dayPacker1">rsAfeRebin108 B/D</div>
+  
+      </div>
+  
+  
+      <div class="calendar"  >
+        <div class="calendar__headerPack">
+        </div>
+  
+      <div class="calendar__weekPack">
+        <div class="calendar__dayPacker1">wsAFE1_108_01</div>
+        <div class="calendar__dayPacker1">wsAFE1_108_02</div>
+        <div class="calendar__dayPacker1">wsAFE1_108_03</div>
+        <div class="calendar__dayPacker1">wsAFE1_108_04</div>
+        <div class="calendar__dayPacker1">wsAFE1_108_05</div>
+        <div class="calendar__dayPacker1">wsAFE1_108_06</div>
+        </div>
+  
+  </div>
+  
+  </section>  
+  
+  <section class="floorP2" id="wall107">
+       
+  
+  
+  </div>
+  
+  <div class="calendar"  >
+      <div class="calendar__header">
+        <div>Wall</div>
+        <div>Induct<p><span id="countSpan"></span></p></div>
+        <div>Rebin<p><span id="countSpan2"></span></p></div>
+        <div>Pack<p><span id="countSpan3"></span></p></div>
+    
+      </div>
+      <div class="calendar__week">
+        <div class="cards2">
+          <div class="card fill-blue" data-card="0">
+            
+            <div class="card__detail">107</div>
+          </div>
+        </div>
+        <div  class="calendar__dayPicker1">in107</div>
+        <div  class="calendar__dayPacker1">rsAfeRebin107 A/C</div>
+        <div class="calendar__dayPacker1">rsAfeRebin107 B/D</div>
+  
+      </div>
+  
+  
+      <div class="calendar"  >
+        <div class="calendar__headerPack">
+        </div>
+  
+      <div class="calendar__weekPack">
+        <div class="calendar__dayPacker1">wsAFE1_107_01</div>
+        <div class="calendar__dayPacker1">wsAFE1_107_02</div>
+        <div class="calendar__dayPacker1">wsAFE1_107_03</div>
+        <div class="calendar__dayPacker1">wsAFE1_107_04</div>
+        <div class="calendar__dayPacker1">wsAFE1_107_05</div>
+        <div class="calendar__dayPacker1">wsAFE1_107_06</div>
+        </div>
+  
+  </div>
+  
+  </section> 
+
+<section class="floorP2" id="wall101">
+
+<div class="calendar"  >
+    <div class="calendar__header">
+      <div>Wall</div>
+      <div>Induct<p><span id="countSpan"></span></p></div>
+      <div>Rebin<p><span id="countSpan2"></span></p></div>
+      <div>Pack<p><span id="countSpan3"></span></p></div>
+  
+    </div>
+    <div class="calendar__week">
+      <div class="cards2">
+        <div class="card fill-blue" data-card="0">
+          
+          <div class="card__detail">101</div>
+        </div>
+      </div>
+      <div  class="calendar__dayPicker1">in101</div>
+      <div  class="calendar__dayPacker1">rsAfeRebin101 A/C</div>
+      <div class="calendar__dayPacker1">rsAfeRebin101 B/D</div>
+
+    </div>
+
+
+    <div class="calendar"  >
+      <div class="calendar__headerPack">
+      </div>
+
+    <div class="calendar__weekPack">
+      <div class="calendar__dayPacker1">wsAFE1_101_01</div>
+      <div class="calendar__dayPacker1">wsAFE1_101_02</div>
+      <div class="calendar__dayPacker1">wsAFE1_101_03</div>
+      <div class="calendar__dayPacker1">wsAFE1_101_04</div>
+      <div class="calendar__dayPacker1">wsAFE1_101_05</div>
+      <div class="calendar__dayPacker1">wsAFE1_101_06</div>
+      </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="floorP2" id="wall102">
+     
+
+
+</div>
+
+<div class="calendar"  >
+    <div class="calendar__header">
+      <div>Wall</div>
+      <div>Induct<p><span id="countSpan"></span></p></div>
+      <div>Rebin<p><span id="countSpan2"></span></p></div>
+      <div>Pack<p><span id="countSpan3"></span></p></div>
+  
+    </div>
+    <div class="calendar__week">
+      <div class="cards2">
+        <div class="card fill-blue" data-card="0">
+          
+          <div class="card__detail">102</div>
+        </div>
+      </div>
+      <div  class="calendar__dayPicker1">in102</div>
+      <div  class="calendar__dayPacker1">rsAfeRebin102 A/C</div>
+      <div class="calendar__dayPacker1">rsAfeRebin102 B/D</div>
+
+    </div>
+
+
+    <div class="calendar"  >
+      <div class="calendar__headerPack">
+      </div>
+
+    <div class="calendar__weekPack">
+      <div class="calendar__dayPacker1">wsAFE1_102_01</div>
+      <div class="calendar__dayPacker1">wsAFE1_102_02</div>
+      <div class="calendar__dayPacker1">wsAFE1_102_03</div>
+      <div class="calendar__dayPacker1">wsAFE1_102_04</div>
+      <div class="calendar__dayPacker1">wsAFE1_102_05</div>
+      <div class="calendar__dayPacker1">wsAFE1_102_06</div>
+      </div>
+
+</div>
+
+</section> 
+
+<section class="floorP2" id="wall103">
+     
+
+
+</div>
+
+<div class="calendar"  >
+    <div class="calendar__header">
+      <div>Wall</div>
+      <div>Induct<p><span id="countSpan"></span></p></div>
+      <div>Rebin<p><span id="countSpan2"></span></p></div>
+      <div>Pack<p><span id="countSpan3"></span></p></div>
+  
+    </div>
+    <div class="calendar__week">
+      <div class="cards2">
+        <div class="card fill-blue" data-card="0">
+          
+          <div class="card__detail">103</div>
+        </div>
+      </div>
+      <div  class="calendar__dayPicker1">in103</div>
+      <div  class="calendar__dayPacker1">rsAfeRebin103 A/C</div>
+      <div class="calendar__dayPacker1">rsAfeRebin103 B/D</div>
+
+    </div>
+
+
+    <div class="calendar"  >
+      <div class="calendar__headerPack">
+      </div>
+
+    <div class="calendar__weekPack">
+      <div class="calendar__dayPacker1">wsAFE1_103_01</div>
+      <div class="calendar__dayPacker1">wsAFE1_103_02</div>
+      <div class="calendar__dayPacker1">wsAFE1_103_03</div>
+      <div class="calendar__dayPacker1">wsAFE1_103_04</div>
+      <div class="calendar__dayPacker1">wsAFE1_103_05</div>
+      <div class="calendar__dayPacker1">wsAFE1_103_06</div>
+      </div>
+
+</div>
+
+</section>  
+
+<!---End of right--> 
+</main2>
+
+</main>
+
+
+
+
+</body>
+
+
+</html>
